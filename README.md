@@ -1,91 +1,72 @@
-
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">RuoYi-Flowable</h1>
-<h4 align="center">基于RuoYi+Flowable 6.x的工作流管理平台</h4>
-<p align="center">
-	<a href="https://gitee.com/tony2y/RuoYi-flowable/stargazers"><img src="https://gitee.com/tony2y/RuoYi-flowable/badge/star.svg?theme=dark?theme=dark"></a>
-</p>
-
 ## 平台简介
 
-基于RuoYi-vue  + Flowable 6.8.x 的工作流管理平台 ~
+* 本仓库为前端技术栈 [Vue3](https://v3.cn.vuejs.org) + [Element Plus](https://element-plus.org/zh-CN) + [Vite](https://cn.vitejs.dev) 版本。
+* 配套后端代码地址[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue)。
+* 前端技术栈（[Vue2](https://cn.vuejs.org) + [Element](https://github.com/ElemeFE/element) + [Vue CLI](https://cli.vuejs.org/zh)），请移步[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue/tree/master/ruoyi-ui)。
+* 阿里云折扣场：[点我进入](http://aly.ruoyi.vip)，腾讯云秒杀场：[点我进入](http://txy.ruoyi.vip)&nbsp;&nbsp;
+* 阿里云优惠券：[点我领取](https://www.aliyun.com/minisite/goods?userCode=brki8iof&share_source=copy_link)，腾讯云优惠券：[点我领取](https://cloud.tencent.com/redirect.php?redirect=1025&cps_key=198c8df2ed259157187173bc7f4f32fd&from=console)&nbsp;&nbsp;
 
-- 不定时同步[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue)至最新版本。
-- 前端采用Vue、Element UI。
-- 后端采用Spring Boot、Spring Security、Redis & Jwt。
-- 权限认证使用Jwt，支持多终端认证系统。
-- 支持加载动态权限菜单，多方式轻松权限控制.
-- 项目地址：[Gitee](https://gitee.com/tony2y/RuoYi-flowable.git)&nbsp;&nbsp;&nbsp;[Github](https://github.com/tony2y/RuoYi-flowable.git)
-- 阿里云折扣场：[点我进入](https://www.aliyun.com/activity/daily/bestoffer?userCode=q2b8atsa)，腾讯云秒杀场：[点我进入](https://curl.qcloud.com/W5KFkBG4)&nbsp;&nbsp;
-- 阿里云优惠券：[点我领取](https://www.aliyun.com/daily-act/ecs/activity_selection?userCode=q2b8atsa)，腾讯云优惠券：[点我领取](https://curl.qcloud.com/AacfyRxq)&nbsp;&nbsp;
-- 特别鸣谢：[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue)
 ## 内置功能
 
-- 在线流程设计器
-- 在线流程表单设计器
-- 单节点配置表单
-- 多实例会签任务
-- 任务节点配置任务/执行监听器
-- 动态配置任务候选人
-- 其它流程相关功能点
+1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+2.  部门管理：配置系统组织机构（公司、部门、小组），树结构展现支持数据权限。
+3.  岗位管理：配置系统用户所属担任职务。
+4.  菜单管理：配置系统菜单，操作权限，按钮权限标识等。
+5.  角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
+6.  字典管理：对系统中经常使用的一些较为固定的数据进行维护。
+7.  参数管理：对系统动态配置常用参数。
+8.  通知公告：系统通知公告信息发布维护。
+9.  操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+10. 登录日志：系统登录日志记录查询包含登录异常。
+11. 在线用户：当前系统中活跃用户状态监控。
+12. 定时任务：在线（添加、修改、删除)任务调度包含执行结果日志。
+13. 代码生成：前后端代码的生成（java、html、xml、sql）支持CRUD下载 。
+14. 系统接口：根据业务代码自动生成相关的api接口文档。
+15. 服务监控：监视当前系统CPU、内存、磁盘、堆栈等相关信息。
+16. 缓存监控：对系统的缓存信息查询，命令统计等。
+17. 在线构建器：拖动表单元素生成相应的HTML代码。
+18. 连接池监视：监视当前系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
 
-## 演示地址
+## 在线体验
 
-- 开源版演示地址：http://open.tony2y.top
-- Vue2 / Vue3 演示地址(付费版)：http://vue3.tony2y.top
-- 移动端演示(h5)地址：http://mobile.tony2y.top
-- 使用文档：https://www.yuque.com/u1024153/icipor
+- admin/admin123  
+- 陆陆续续收到一些打赏，为了更好的体验已用于演示服务器升级。谢谢各位小伙伴。
 
-## 其它业务系统
-
-- [[ 智慧农业认养系统 ]](https://gitee.com/tony2y/smart-breed)：基于Java + SpringBoot + Mybatis Plus + Redis + Vue + antdv，支持认养、商城、营销、会员、进销存、多租户等功能，包含小程序，系统管理后台。
-- [[ 智慧景区管理系统 ]](https://gitee.com/tony2y/scenic-spot)：基于Java + SpringBoot + Mybatis Plus + Redis + Vue + antdv，支持景区管理、售票、地块管理、认养、商城、农资管理、积分兑换等功能，包含小程序，系统管理后台。
-
-
-## 联系方式
-
-付费版咨询、技术咨询、项目定制开发等其它支持可扫码添加微信进行沟通交流。
-
-![微信](https://foruda.gitee.com/images/1673021725627728693/f3d6216b_2042292.jpeg)
-## 工作流交流群
-### QQ群号：
-- ~~群1: 782924350(1)~~-已满、
-- 群二: 658810320(2)
-- star 项目后复制群号申请入群。
-
-## 请作者喝杯咖啡 ~ (*^▽^*)
-
-<img src="https://foruda.gitee.com/images/1672215449995765124/596b46c3_2042292.png">
+演示地址：http://vue.ruoyi.vip  
+文档地址：http://doc.ruoyi.vip
 
 ## 演示图
 
 <table>
     <tr>
-        <td><img src="https://foruda.gitee.com/images/1672821697044447970/6bc09d47_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1672821770531098361/972cf362_2042292.png"/></td>
-    </tr> 
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1725580931106887779/326bf7f6_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1725580975079462113/f13c15f8_2042292.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/cd1f90be5f2684f4560c9519c0f2a232ee8.jpg"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/1cbcf0e6f257c7d3a063c0e3f2ff989e4b3.jpg"/></td>
     </tr>
     <tr>
-        <td><img src="https://foruda.gitee.com/images/1725581014458193305/f58bf176_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1725581065882554528/be686bb6_2042292.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-8074972883b5ba0622e13246738ebba237a.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-9f88719cdfca9af2e58b352a20e23d43b12.png"/></td>
     </tr>
     <tr>
-        <td><img src="https://foruda.gitee.com/images/1725581121073519190/3f99f2fc_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1725581177903309316/70d24a73_2042292.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-39bf2584ec3a529b0d5a3b70d15c9b37646.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-936ec82d1f4872e1bc980927654b6007307.png"/></td>
     </tr>
 	<tr>
-        <td><img src="https://foruda.gitee.com/images/1672214208441821384/b90c26be_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1672214266396146807/3e6408a3_2042292.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-b2d62ceb95d2dd9b3fbe157bb70d26001e9.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/up-d67451d308b7a79ad6819723396f7c3d77a.png"/></td>
     </tr>	 
     <tr>
-        <td><img src="https://foruda.gitee.com/images/1672214318671690501/80c425ed_2042292.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1672214425678628903/251c4200_2042292.png"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/5e8c387724954459291aafd5eb52b456f53.jpg"/></td>
+        <td><img src="https://oscimg.oschina.net/oscnet/644e78da53c2e92a95dfda4f76e6d117c4b.jpg"/></td>
+    </tr>
+    <tr>
+    </tr>
+	<tr>
+    </tr>	 
+    <tr>
     </tr>
 </table>
 
-## 推荐
-大家在使用本项目时，推荐结合贺波老师的书
-[《深入Flowable流程引擎：核心原理与高阶实战》](https://item.jd.com/14804836.html)学习。这本书得到了Flowable创始人Tijs Rademakers亲笔作序推荐，对系统学习和深入掌握Flowable的用法非常有帮助。
-<img src="https://foruda.gitee.com/images/1727432593738798662/46c08088_2042292.png" width="800" height="1000"/>
+
+## 若依前后端分离交流群
+
+QQ群： [![加入QQ群](https://img.shields.io/badge/已满-937441-blue.svg)](https://jq.qq.com/?_wv=1027&k=5bVB1og) [![加入QQ群](https://img.shields.io/badge/已满-887144332-blue.svg)](https://jq.qq.com/?_wv=1027&k=5eiA4DH) [![加入QQ群](https://img.shields.io/badge/已满-180251782-blue.svg)](https://jq.qq.com/?_wv=1027&k=5AxMKlC) [![加入QQ群](https://img.shields.io/badge/已满-104180207-blue.svg)](https://jq.qq.com/?_wv=1027&k=51G72yr) [![加入QQ群](https://img.shields.io/badge/已满-186866453-blue.svg)](https://jq.qq.com/?_wv=1027&k=VvjN2nvu) [![加入QQ群](https://img.shields.io/badge/已满-201396349-blue.svg)](https://jq.qq.com/?_wv=1027&k=5vYAqA05) [![加入QQ群](https://img.shields.io/badge/已满-101456076-blue.svg)](https://jq.qq.com/?_wv=1027&k=kOIINEb5) [![加入QQ群](https://img.shields.io/badge/101539465-blue.svg)](https://jq.qq.com/?_wv=1027&k=UKtX5jhs) 点击按钮入群。
