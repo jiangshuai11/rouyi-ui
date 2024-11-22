@@ -59,6 +59,7 @@
     "screenfull": "5.0.2",
     "sortablejs": "1.10.2",
     "vkbeautify": "^0.99.3",
+    "splitpanes": "2.4.1",
     "vue": "2.6.12",
     "vue-count-to": "1.0.13",
     "vue-cropper": "0.5.5",
