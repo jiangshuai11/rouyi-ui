@@ -92,7 +92,7 @@ export default {
   data() {
     return {
       // 版本号
-      version: "3.4.0",
+      version: "3.8.9"
     };
   },
   methods: {
