@@ -69,33 +69,126 @@
     </dependencies>
 
     <build>
+        <finalName>ruoyi-gateway</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.5.15</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${project.mvn.compiler.plugin.version}</version>
                 <configuration>
-                    <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${lombok.mapstruct.binding}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <compilerArgs>
+                        <compilerArg>
+                            -Amapstruct.suppressGeneratorTimestamp=true
+                        </compilerArg>
+                        <compilerArg>
+                            -Amapstruct.suppressGeneratorVersionInfoComment=true
+                        </compilerArg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${project.mvn.assembly.plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven</groupId>
+                        <artifactId>maven-core</artifactId>
+                        <version>2.2.1</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-file</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-provider-api</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-http-lightweight</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-http-shared</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-provider-api</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-http</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-ssh-external</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-ssh</artifactId>
+                            </exclusion>
+                            <exclusion>
+                                <groupId>org.apache.maven.reporting</groupId>
+                                <artifactId>maven-reporting-api</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>assemble/package.xml</descriptor>
+                    </descriptors>
                 </configuration>
                 <executions>
                     <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            <plugin>   
-                <groupId>org.apache.maven.plugins</groupId>   
-                <artifactId>maven-war-plugin</artifactId>   
-                <version>3.1.0</version>   
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <warName>${project.artifactId}</warName>
-                </configuration>   
-           </plugin>   
         </plugins>
-        <finalName>${project.artifactId}</finalName>
     </build>
 
 </project>
