@@ -247,9 +247,9 @@
                 <scope>compile</scope>
             </dependency>
             <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.4.0</version>
+                <groupId>com.dameng</groupId>
+                <artifactId>DmJdbcDriver8</artifactId>
+                <version>${dm.version}</version>
             </dependency>
 
         </dependencies>
